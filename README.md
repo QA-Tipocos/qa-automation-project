@@ -9,7 +9,7 @@ This project is an introduction to automation testing using Playwright. The main
 ### Step 1: Create a New Playwright Project and Push it to Github
 
 1. **Initialize the Project**  
-   Clone this repository
+   Clone the github repository
 
    ```bash
    git clone git@github.com:QA-Tipocos/qa-automation-project.git
