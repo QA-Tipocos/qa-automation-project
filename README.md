@@ -13,7 +13,7 @@ This project is an introduction to automation testing using Playwright. The main
 
    ```bash
    git clone git@github.com:QA-Tipocos/qa-automation-project.git
-   cd playwright-project
+   cd qa-automation-project
    ```
 
    Set up a new Node.js project and install Playwright as a dependency.
