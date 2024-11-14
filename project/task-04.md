@@ -35,3 +35,4 @@
    - Explain:
      - What `async` does when placed before a function.
      - How `await` works within an async function and why it's used.
+     - What happens if I forget to add await in the steps of an async function?
