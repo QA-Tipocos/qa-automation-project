@@ -15,7 +15,7 @@ npm init playwright@latest # This is the proper command to initialize the Playwr
 
 ```bash
 ✔ Do you want to use TypeScript or JavaScript? · TypeScript # Select TypeScript
-✔ Where to put your end-to-end tests? · e2e # Select e2e
+✔ Where to put your end-to-end tests? · tests # Select tests
 ✔ Add a GitHub Actions workflow? (y/N) · false # Select N
 ✔ Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true # Select Y
 ```
@@ -36,6 +36,7 @@ npx playwright codegen # Auto generate tests with Codegen.
 1. **Establish the Initial Test Structure**
 
 - Begin by deleting any sample test files, like example.spec.ts.
+- Delete the test-examples folder and its content as well.
 - Create a new test file named `login.spec.ts`. Use the following command in the terminal:
 
 ```bash
