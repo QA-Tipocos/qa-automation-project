@@ -33,5 +33,6 @@
 
 3. **Test Requirements**
    - The goal of this test is to:
+     - The name of the test must be "should access the login page"
      - Access the [Sauce Demo Page](https://www.saucedemo.com/)
      - Assert that the page title is "Swag Labs"
