@@ -2,7 +2,7 @@
 
 ## Goals
 
-### Step 1: Set Up and Write Your First Test
+### Step 1: Initialize the Playwright project
 
 - For some reason some files were not correctly generated when initializing the Playwright project. I removed the test folder so we can fix this.
 
