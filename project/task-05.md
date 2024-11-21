@@ -6,15 +6,15 @@ O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabal
 
 ### Branch Principal (main)
 
-**Objetivo:** Branch principal, usada para código em produção.  
-**Uso:** Não faça commits diretamente. Atualizações ocorrem apenas através de merges vindos de develop ou hotfix.
+**Objetivo:** Branch principal, usada para código em produção.
+
+- Não faça commits diretamente. Atualizações ocorrem apenas através de merges vindos de develop ou hotfix.
 
 ---
 
 ### Branch de Desenvolvimento (develop)
 
-**Objetivo:** Branch de desenvolvimento, usada para consolidar funcionalidades antes de irem para produção.  
-**Uso:**
+**Objetivo:** Branch de desenvolvimento, usada para consolidar funcionalidades antes de irem para produção.
 
 - Não faça commits diretamente.
 - Use esta branch como base para criar novas funcionalidades.
@@ -24,7 +24,6 @@ O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabal
 ### Branch de Novas Funcionalidades (feature/nome-da-sua-funcionalidade)
 
 **Objetivo:** Essas branches são temporárias, e devem ser criadas sempre que desejar implementar uma nova funcionalidade ou fazer alguma mudança no código.
-**Uso:**
 
 - Não faça commits diretamente.
 - Use esta branch como base para criar novas funcionalidades.
@@ -35,7 +34,6 @@ O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabal
 ### Branch de Correção de Emergência (hotfix/nome-da-correção)
 
 **Objetivo:** Usada para corrigir problemas críticos identificados em produção.
-**Uso:**
 
 - Deve ser criada sempre a partir da branch `main`.
 - Após a conclusão da correção, deve ser mergeada de volta para a branch `main` para que o código corrigido seja disponibilizado em produção.
