@@ -1,6 +1,6 @@
 # Task 05
 
-![git flow](./project/resources/image.png)
+![git flow](./resources/git-flow.png)
 
 ## Git Flow
 
