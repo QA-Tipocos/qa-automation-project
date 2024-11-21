@@ -1,16 +1,16 @@
-// Importa as bibliotecas necessárias do Playwright para configurar e rodar os testes
+// Import the necessary libraries from Playwright to set up and run tests
 import { test, expect } from "@playwright/test";
 
-// Define um novo teste com o nome "should access the login page"
+// Define a new test named "should access the login page"
 test("should access the login page", async ({ page }) => {
-  // O comando 'page.goto()' acessa a URL do site que vamos testar
-  // No caso, estamos acessando a página de login do Sauce Demo
+  // The 'page.goto()' command opens the URL of the website we want to test
+  // In this case, we are opening the Sauce Demo login page
   await page.goto("https://www.saucedemo.com/");
 
-  // Verifica se o título da página está correto. 
-  // 'expect' é utilizado para fazer a asserção e 'toBe' para comparar com o valor esperado
-  // O valor esperado é "Swag Labs", que é o título da página de login do Sauce Demo
+  // Check if the page title is correct. 
+  // 'expect' is used to make the check, and 'toBe' is used to compare with the expected value
+  // The expected value is "Swag Labs", which is the login page title of Sauce Demo
   await expect(page).toHaveTitle("Swag Labs");
 
-  // Após a asserção, o teste será considerado bem-sucedido se o título for o esperado
+  // After the check, the test will pass if the title matches the expected one
 });
