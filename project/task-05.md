@@ -1,24 +1,8 @@
 # Task 05
 
-## Goals
+## Git Flow
 
-### Step 1: Git Flow
-
-O **Git Flow** é um modelo de ramificação que ajuda a organizar o fluxo de trabalho em projetos de desenvolvimento. Ele utiliza duas principais branches permanentes:
-
-- **`main`**: branch principal, usada para código em produção.
-- **`develop`**: branch de desenvolvimento, usada para consolidar funcionalidades antes de irem para produção.
-
-Além dessas, são criadas branches temporárias para recursos específicos.
-
-markdown
-Copy code
-
-# Documentação: Git Flow com Branches `main` e `develop`
-
-## Introdução
-
-O **Git Flow** é um modelo de ramificação que ajuda a organizar o fluxo de trabalho em projetos de desenvolvimento. Ele utiliza duas principais branches permanentes:
+O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabalho em projetos de desenvolvimento. Ele utiliza duas principais branches permanentes:
 
 1. Branch Principal (main)
    Objetivo: Branch principal, usada para código em produção.  
@@ -29,7 +13,8 @@ O **Git Flow** é um modelo de ramificação que ajuda a organizar o fluxo de tr
    Uso: Não faça commits diretamente. Use esta branch como base para criar novas funcionalidades.
 
 3. Branch de Novas Funcionalidades (feature/nome-da-sua-funcionalidade)
-   Objetivo: Essa branch deve ser criada sempre que desejar implementar uma nova funcionalidade ou fazer alguma mudança no código. Essa branch deve ser criada sempre a partir da branch `develop`.
+   Objetivo: Essas branches são temporárias, e devem ser criadas sempre que desejar implementar uma nova funcionalidade ou fazer alguma mudança no código.
+   Importante: Essa branch deve ser criada sempre a partir da branch `develop`.
 
 ### Muito Importante
 
@@ -162,3 +147,5 @@ A descrição de um Pull Request (PR) de testes deve ser clara, descrever os obj
 
 Após adicionar o título e uma descrição top para o seu PR, clique no botão `Create Pull Request` e aguarde o Code Review dos seus pares.
 Uma vez que o ok for dado pelos seus pares, o PR será aprovado e você poderá fazer o merge da sua branch para a brach develop.
+
+![pr](./resources/pr.png)
