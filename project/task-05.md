@@ -1,5 +1,7 @@
 # Task 05
 
+![git flow](./project/resources/image.png)
+
 ## Git Flow
 
 O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabalho em projetos de desenvolvimento. Ele utiliza duas principais branches permanentes:
