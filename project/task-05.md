@@ -72,12 +72,93 @@ git commit -m "Adicionado o teste com login inválido e atulizado teste de login
 Quando você teminar todas as alterações necessárias para a sua task, faça o push da nova branch com o código
 
 ```bash
-git push
+git push --set-upstream origin feature/add-login-tests-with-invalid-information
+```
+
+O retorno desse comando deve conter o link para que seja aberto o Pull Request no Github
+
+```bash
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.57 KiB | 1.57 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature/add-login-tests-with-invalid-information' on GitHub by visiting:
+remote: https://github.com/QA-Tipocos/qa-automation-project/pull/new/feature/add-login-tests-with-invalid-information
+remote:
 ```
 
 ### Criando um Pull Request
 
 Após completar o último passo, você terá uma nova branch no Github.
-O que queremos agora é criar um `Pull Request` para que outro developer faça um code review das suas alterações antes que o código seja merged para a branch develop.
+O que queremos agora é criar um `Pull Request` para que outro developer faça um `code review` das suas alterações antes que o código seja merged para a branch develop.
 
-O Pull Request deve ser criado diretamente na página do Github.
+O Pull Request deve ser criado diretamente na página do Github -> [https://github.com/QA-Tipocos/qa-automation-project/pull/new/feature/add-login-tests-with-invalid-information](https://github.com/QA-Tipocos/qa-automation-project/pull/new/feature/add-login-tests-with-invalid-information).
+
+#### Escolha a branch com a qual você que fazer merge
+
+- A branch da esquerda: branch com a qual você quer fazer merge -> `develop`
+- A branch da direita: branch deve ser a sua branch -> `feature/add-login-tests-with-invalid-information`
+
+![Comparing Changes](./resources/comparing-changes.png)
+
+#### Descrição do PR
+
+A descrição de um Pull Request (PR) de testes deve ser clara, descrever os objetivos, cobrir as alterações feitas e especificar o que foi testado. Exemplo:
+
+````markdown
+    ### **Descrição**
+
+    Este PR adiciona testes automatizados para a funcionalidade `Testes com informações inválidas de Login` implementada na branch `feature/add-login-tests-with-invalid-information`. Ele garante que o comportamento esperado esteja validado em diferentes cenários.
+
+    ---
+
+    ### **Alterações Realizadas**
+
+    - Adicionados testes para validar os seguintes cenários:
+      - **Caso de Sucesso**: Verifica se o comportamento é o esperado quando os dados de entrada são válidos.
+      - **Casos de Erro**: Valida cenários como campos obrigatórios ausentes, valores inválidos.
+    - Criados novos `fixtures` para simular dados de entrada no ambiente de teste.
+    - Atualizado o arquivo de configuração do framework de testes para incluir suporte à nova funcionalidade.
+    - Incluída documentação breve no arquivo README do módulo de testes.
+
+    ---
+
+    ### **Como Testar**
+
+    1. Faça o checkout desta branch:
+      ```bash
+      git checkout `feature/add-login-tests-with-invalid-information`
+      ```
+
+    2. Instale dependências, se necessário:
+      ```bash
+      npm install
+      ```
+    3. Execute os testes automatizados:
+      ```bash
+      npx playwright test
+      ```
+    4. Verifique a saída no console ou relatórios gerados.
+
+    ---
+
+    ### **Itens Pendentes**
+
+    - [ ] Melhorar implementação da função x, y, z
+    - [ ] Adicionar teste para casos x, y, z
+
+    ---
+
+    ### **Referências**
+
+    - Ticket relacionado: [[#123](https://ticket.com/c/link-para-ticket)](link-para-ticket)
+````
+
+#### Crie o PR e Aguarde o Code Review
+
+Após adicionar o título e uma descrição top para o seu PR, clique no botão `Create Pull Request` e aguarde o Code Review dos seus pares.
+Uma vez que o ok for dado pelos seus pares, o PR será aprovado e você poderá fazer o merge da sua branch para a brach develop.
