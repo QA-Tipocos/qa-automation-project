@@ -14,3 +14,4 @@ test("should access the login page", async ({ page }) => {
 
   // After the check, the test will pass if the title matches the expected one
 });
+
