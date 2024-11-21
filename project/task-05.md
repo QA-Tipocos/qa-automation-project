@@ -1,7 +1,5 @@
 # Task 05
 
-![git flow](./resources/git-flow.png)
-
 ## Git Flow
 
 O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabalho em projetos de desenvolvimento. Ele utiliza duas principais branches permanentes:
@@ -17,6 +15,17 @@ O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabal
 3. Branch de Novas Funcionalidades (feature/nome-da-sua-funcionalidade)
    Objetivo: Essas branches são temporárias, e devem ser criadas sempre que desejar implementar uma nova funcionalidade ou fazer alguma mudança no código.
    Importante: Essa branch deve ser criada sempre a partir da branch `develop`.
+
+4. Branch de Correção de Emergência (hotfix/nome-da-correção)
+   Objetivo: Usada para corrigir problemas críticos identificados em produção.
+
+   Uso:
+
+   - Deve ser criada sempre a partir da branch `main`.
+   - Após a conclusão da correção, deve ser mergeada de volta para a branch `main` para que o código corrigido seja disponibilizado em produção.
+   - Em seguida, o merge também deve ser feito da branch `main` para a `develop` para garantir que a correção esteja disponível no fluxo de desenvolvimento contínuo.
+
+![git flow](./resources/git-flow.png)
 
 ### Muito Importante
 
