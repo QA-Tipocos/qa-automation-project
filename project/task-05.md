@@ -4,26 +4,36 @@
 
 O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabalho em projetos de desenvolvimento. Ele utiliza duas principais branches permanentes:
 
-1. Branch Principal (main)
-   Objetivo: Branch principal, usada para código em produção.  
-   Uso: Não faça commits diretamente. Atualizações ocorrem apenas através de merges vindos de develop ou hotfix.
+### Branch Principal (main)
 
-2. Branch de Desenvolvimento (develop)
-   Objetivo: Branch de desenvolvimento, usada para consolidar funcionalidades antes de irem para produção.  
-   Uso: Não faça commits diretamente. Use esta branch como base para criar novas funcionalidades.
+**Objetivo:** Branch principal, usada para código em produção.  
+**Uso:** Não faça commits diretamente. Atualizações ocorrem apenas através de merges vindos de develop ou hotfix.
 
-3. Branch de Novas Funcionalidades (feature/nome-da-sua-funcionalidade)
-   Objetivo: Essas branches são temporárias, e devem ser criadas sempre que desejar implementar uma nova funcionalidade ou fazer alguma mudança no código.
-   Importante: Essa branch deve ser criada sempre a partir da branch `develop`.
+### Branch de Desenvolvimento (develop)
 
-4. Branch de Correção de Emergência (hotfix/nome-da-correção)
-   Objetivo: Usada para corrigir problemas críticos identificados em produção.
+**Objetivo:** Branch de desenvolvimento, usada para consolidar funcionalidades antes de irem para produção.  
+**Uso:**
 
-   Uso:
+- Não faça commits diretamente.
+- Use esta branch como base para criar novas funcionalidades.
 
-   - Deve ser criada sempre a partir da branch `main`.
-   - Após a conclusão da correção, deve ser mergeada de volta para a branch `main` para que o código corrigido seja disponibilizado em produção.
-   - Em seguida, o merge também deve ser feito da branch `main` para a `develop` para garantir que a correção esteja disponível no fluxo de desenvolvimento contínuo.
+### Branch de Novas Funcionalidades (feature/nome-da-sua-funcionalidade)
+
+**Objetivo:** Essas branches são temporárias, e devem ser criadas sempre que desejar implementar uma nova funcionalidade ou fazer alguma mudança no código.
+**Uso:**
+
+- Não faça commits diretamente.
+- Use esta branch como base para criar novas funcionalidades.
+- **Importante:** Essa branch deve ser criada sempre a partir da branch `develop`.
+
+### Branch de Correção de Emergência (hotfix/nome-da-correção)
+
+**Objetivo:** Usada para corrigir problemas críticos identificados em produção.
+**Uso:**
+
+- Deve ser criada sempre a partir da branch `main`.
+- Após a conclusão da correção, deve ser mergeada de volta para a branch `main` para que o código corrigido seja disponibilizado em produção.
+- Em seguida, o merge também deve ser feito da branch `main` para a `develop` para garantir que a correção esteja disponível no fluxo de desenvolvimento contínuo.
 
 ![git flow](./resources/git-flow.png)
 
