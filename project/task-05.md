@@ -9,6 +9,8 @@ O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabal
 **Objetivo:** Branch principal, usada para código em produção.  
 **Uso:** Não faça commits diretamente. Atualizações ocorrem apenas através de merges vindos de develop ou hotfix.
 
+---
+
 ### Branch de Desenvolvimento (develop)
 
 **Objetivo:** Branch de desenvolvimento, usada para consolidar funcionalidades antes de irem para produção.  
@@ -16,6 +18,8 @@ O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabal
 
 - Não faça commits diretamente.
 - Use esta branch como base para criar novas funcionalidades.
+
+---
 
 ### Branch de Novas Funcionalidades (feature/nome-da-sua-funcionalidade)
 
@@ -26,6 +30,8 @@ O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabal
 - Use esta branch como base para criar novas funcionalidades.
 - **Importante:** Essa branch deve ser criada sempre a partir da branch `develop`.
 
+---
+
 ### Branch de Correção de Emergência (hotfix/nome-da-correção)
 
 **Objetivo:** Usada para corrigir problemas críticos identificados em produção.
@@ -35,16 +41,35 @@ O **Git Flow** é um modelo de branching que ajuda a organizar o fluxo de trabal
 - Após a conclusão da correção, deve ser mergeada de volta para a branch `main` para que o código corrigido seja disponibilizado em produção.
 - Em seguida, o merge também deve ser feito da branch `main` para a `develop` para garantir que a correção esteja disponível no fluxo de desenvolvimento contínuo.
 
+---
+
 ![git flow](./resources/git-flow.png)
 
-### Muito Importante
+## Task - Branch Feature
 
-Antes de criar a sua branch feature, certifique-se de verificar se sua branch develop está atualizada.
+O objetivos dessa task são:
+
+- [ ] Criar uma branch feature.
+- [ ] No arquivo `login.spec.ts`, duplique a função do teste - dessa vez com o nome do teste "should access the login page 2".
+- [ ] Fazer push da branch criada para o Github.
+- [ ] Abrir um pull request da sua branch para a branch `develop`.
+- [ ] Aguardar o code review de outro developer.
+- [ ] Fazer merge da sua branch para a branch `develop`
+
+As instruções de como realizar esses passos estão abaixo.
+
+---
+
+### Atualize a branch develop
+
+**IMPORTANTE:** Antes de criar a sua branch feature, certifique-se de verificar se sua branch develop está atualizada.
 
 ```bash
 git checkout develop # Certifique-se que voce está branch develop
 git pull develop # Atualize a branch develop
 ```
+
+---
 
 ### Criando a branch feature
 
@@ -54,6 +79,8 @@ Crie a branch feature sempre seguindo o padrão `feature/breve-descricao-do-que-
 git checkout -b feature/add-login-tests-with-invalid-information # Para criar uma branch a partir da branch develop
 git branch --show-current # Para verificar se está na branch criada
 ```
+
+---
 
 ### Trabalhando na nova feature
 
@@ -72,6 +99,8 @@ git commit -m "Adicionado o teste com login válido"
 git add .
 git commit -m "Adicionado o teste com login inválido e atulizado teste de login válido"
 ```
+
+---
 
 ### Fazendo push da nova branch para o repositório
 
@@ -97,6 +126,8 @@ remote: https://github.com/QA-Tipocos/qa-automation-project/pull/new/feature/add
 remote:
 ```
 
+---
+
 ### Criando um Pull Request
 
 Após completar o último passo, você terá uma nova branch no Github.
@@ -104,12 +135,16 @@ O que queremos agora é criar um `Pull Request` para que outro developer faça u
 
 O Pull Request deve ser criado diretamente na página do Github -> [https://github.com/QA-Tipocos/qa-automation-project/pull/new/feature/add-login-tests-with-invalid-information](https://github.com/QA-Tipocos/qa-automation-project/pull/new/feature/add-login-tests-with-invalid-information).
 
+---
+
 #### Escolha a branch com a qual você que fazer merge
 
 - A branch da esquerda: branch com a qual você quer fazer merge -> `develop`
 - A branch da direita: branch deve ser a sua branch -> `feature/add-login-tests-with-invalid-information`
 
 ![Comparing Changes](./resources/comparing-changes.png)
+
+---
 
 #### Descrição do PR
 
@@ -163,6 +198,8 @@ A descrição de um Pull Request (PR) de testes deve ser clara, descrever os obj
 
     - Ticket relacionado: [[#123](https://ticket.com/c/link-para-ticket)](link-para-ticket)
 ````
+
+---
 
 #### Crie o PR e Aguarde o Code Review
 
